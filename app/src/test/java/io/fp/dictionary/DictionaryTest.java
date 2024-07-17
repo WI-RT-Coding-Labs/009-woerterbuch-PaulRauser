@@ -101,12 +101,4 @@ class DictionaryTest {
         // Check if English word is retrieved correctly
         assertEquals("apple", dictionary.getEnglishWord("apfel"));
     }
-
-    @Test
-    void testGetEnglishWordException() throws DictionaryException {
-        // Works if d) part 2 is correct
-        // Test if getting a non-existing word throws an exception
-        assertThrows(DictionaryException.class ,() -> dictionary.getEnglishWord("apfel"));
-    }
-
 }

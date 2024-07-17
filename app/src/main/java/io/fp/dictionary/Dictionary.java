@@ -12,7 +12,11 @@ public class Dictionary {
     }
 
     public void addWordsToDictionary(String english, String german) throws DictionaryException {
-       //Aufgabe a)
+        if(!dictionary.containsKey(english)) dictionary.put(english, german);
+        else {
+            throw new DictionaryException(String.format("The word %s is already in the dictionary", english));
+        }
+        
     }
 
     public void removeWordFromDictionary(String english) throws DictionaryException{
